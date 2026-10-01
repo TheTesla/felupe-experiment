@@ -1,0 +1,10 @@
+# Debug-/Zwischenartefakte
+probe_api.py
+sim_log.txt
+viz_log.txt
+refine_log.txt
+refine2_log.txt
+luftmatratze_result_v2.npz
+luftmatratze_result_fein.npz
+__pycache__/
+*.pyc
