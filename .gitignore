@@ -8,3 +8,4 @@ luftmatratze_result_v2.npz
 luftmatratze_result_fein.npz
 __pycache__/
 *.pyc
+punkt_log.txt
