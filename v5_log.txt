@@ -1,0 +1,509 @@
+Dots im Halbmodell: 26 (Voll: ~50)
+Dreiecksseite (Sehne) = 56.1 mm | Versatz 30 mm | Ziel war nahezu gleichseitig
+Schweisszellen: 768 | Merge-Knoten: 1022
+Zellen: 6000 | Knoten: 11178
+Kavitaetsflaechen: 4740
+Nahtknoten-Kandidaten: [   0 3050 8128] -> [[ 0.         40.24648293  0.        ]
+ [ 0.         40.54648293  0.        ]
+ [ 0.         55.24648293  0.        ]]
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 0.000e+00 | 0.000e+00 |
+
+Converged in 1 iterations (Assembly: 0.8494 s, Solve: 7.714 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 2.896e+00 | 1.697e+00 |
+| 2 | 5.869e-04 | 3.544e-02 |
+| 3 | 4.360e-09 | 1.971e-04 |
+
+Converged in 3 iterations (Assembly: 2.001 s, Solve: 21.05 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=  4.81 mbar: r=[40.20,55.28] umax=0.047
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 9.184e-08 | 1.588e-03 |
+| 2 | 1.833e-10 | 5.824e-05 |
+
+Converged in 2 iterations (Assembly: 1.66 s, Solve: 15.52 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 3.619e+00 | 3.187e+00 |
+| 2 | 2.638e-03 | 1.229e-01 |
+| 3 | 2.847e-07 | 2.583e-03 |
+| 4 | 2.031e-10 | 1.221e-04 |
+
+Converged in 4 iterations (Assembly: 2.727 s, Solve: 30.24 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 13.61 mbar: r=[40.11,55.33] umax=0.137
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 1.160e-07 | 2.982e-03 |
+| 2 | 7.834e-11 | 6.552e-05 |
+
+Converged in 2 iterations (Assembly: 1.44 s, Solve: 14.82 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 3.639e+00 | 4.348e+00 |
+| 2 | 5.072e-03 | 2.230e-01 |
+| 3 | 2.393e-06 | 9.598e-03 |
+| 4 | 3.051e-11 | 1.230e-05 |
+
+Converged in 4 iterations (Assembly: 2.801 s, Solve: 29.88 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 25.00 mbar: r=[39.98,55.41] umax=0.264
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 6.191e-07 | 9.296e-03 |
+| 2 | 2.831e-11 | 7.811e-06 |
+
+Converged in 2 iterations (Assembly: 1.364 s, Solve: 14.06 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 3.799e+00 | 5.562e+00 |
+| 2 | 9.088e-03 | 3.592e-01 |
+| 3 | 1.541e-05 | 2.800e-02 |
+| 4 | 2.054e-11 | 2.693e-06 |
+
+Converged in 4 iterations (Assembly: 2.617 s, Solve: 29.36 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 38.49 mbar: r=[39.81,55.51] umax=0.431
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 2.675e-06 | 2.386e-02 |
+| 2 | 1.881e-11 | 2.971e-06 |
+
+Converged in 2 iterations (Assembly: 1.364 s, Solve: 15.12 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 4.210e+00 | 7.021e+00 |
+| 2 | 1.733e-02 | 5.804e-01 |
+| 3 | 1.076e-04 | 7.955e-02 |
+| 4 | 4.177e-11 | 3.004e-05 |
+
+Converged in 4 iterations (Assembly: 2.843 s, Solve: 30.09 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 53.79 mbar: r=[39.59,55.63] umax=0.651
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 1.653e-03 | 6.976e-01 |
+| 2 | 2.053e-11 | 3.717e-05 |
+
+Converged in 2 iterations (Assembly: 1.346 s, Solve: 14.78 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 5.062e+00 | 9.001e+00 |
+| 2 | 3.794e-02 | 1.013e+00 |
+| 3 | 1.012e-03 | 2.513e-01 |
+| 4 | 5.136e-09 | 4.616e-04 |
+
+Converged in 4 iterations (Assembly: 2.725 s, Solve: 28.83 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 70.71 mbar: r=[39.29,55.77] umax=0.946
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 1.597e-07 | 7.821e-03 |
+| 2 | 1.373e-11 | 4.568e-05 |
+
+Converged in 2 iterations (Assembly: 1.373 s, Solve: 15.01 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 6.933e+00 | 1.215e+01 |
+| 2 | 9.938e-02 | 1.984e+00 |
+| 3 | 1.633e-02 | 9.888e-01 |
+| 4 | 1.841e-06 | 1.258e-02 |
+| 5 | 1.227e-11 | 2.119e-05 |
+
+Converged in 5 iterations (Assembly: 3.473 s, Solve: 36.94 s).
+
+Substep 2/2 of Step 1/1 successful.
+p= 89.11 mbar: r=[38.87,55.98] umax=1.365
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 4.626e-05 | 1.487e-01 |
+| 2 | 9.431e-12 | 1.689e-06 |
+
+Converged in 2 iterations (Assembly: 1.387 s, Solve: 14.1 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 1.227e+01 | 1.865e+01 |
+| 2 | 2.516e-01 | 3.757e+00 |
+| 3 | 5.632e-01 | 5.126e+00 |
+| 4 | 1.461e-03 | 5.341e-01 |
+| 5 | 1.631e-05 | 2.499e-02 |
+| 6 | 9.473e-12 | 1.994e-05 |
+
+Converged in 6 iterations (Assembly: 4.448 s, Solve: 53.22 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=108.87 mbar: r=[38.12,56.32] umax=2.088
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 4.844e-07 | 1.680e-02 |
+| 2 | 9.175e-12 | 7.538e-06 |
+
+Converged in 2 iterations (Assembly: 2.337 s, Solve: 26.61 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 3.090e+01 | 4.036e+01 |
+| 2 | 3.195e-01 | 3.414e+00 |
+| 3 | 1.467e+01 | 4.347e+01 |
+| 4 | 6.581e-02 | 3.330e+00 |
+| 5 | 6.123e-01 | 1.829e+00 |
+| 6 | 1.276e-03 | 1.876e-01 |
+| 7 | 4.062e-04 | 6.585e-02 |
+| 8 | 8.166e-11 | 7.415e-05 |
+
+Converged in 8 iterations (Assembly: 6.988 s, Solve: 89.56 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=129.90 mbar: r=[35.37,57.15] umax=4.549
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 4.825e-07 | 1.937e-02 |
+| 2 | 9.529e-12 | 1.999e-06 |
+
+Converged in 2 iterations (Assembly: 1.506 s, Solve: 16.49 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 2.310e+01 | 8.030e+01 |
+| 2 | 4.626e+00 | 5.226e+01 |
+| 3 | 1.944e+01 | 2.068e+01 |
+| 4 | 2.101e+00 | 5.565e+00 |
+| 5 | 7.708e+00 | 1.524e+01 |
+| 6 | 4.366e-01 | 2.082e+00 |
+| 7 | 2.682e-01 | 3.971e+00 |
+| 8 | 4.988e-03 | 2.145e-01 |
+| 9 | 7.970e-05 | 6.666e-02 |
+|10 | 1.079e-09 | 7.850e-05 |
+
+Converged in 10 iterations (Assembly: 11.34 s, Solve: 135.7 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=152.15 mbar: r=[33.00,57.13] umax=6.606
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 5.128e-05 | 2.275e-01 |
+| 2 | 8.339e-12 | 3.953e-06 |
+
+Converged in 2 iterations (Assembly: 2.028 s, Solve: 25.81 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 8.881e+01 | 3.891e+01 |
+| 2 | 1.547e+00 | 1.224e+01 |
+| 3 | 5.245e+00 | 8.056e+00 |
+| 4 | 4.478e-01 | 2.935e+00 |
+| 5 | 3.156e-01 | 2.035e+00 |
+| 6 | 7.522e-03 | 4.065e-01 |
+| 7 | 4.912e-05 | 2.307e-02 |
+| 8 | 3.520e-10 | 1.281e-04 |
+
+Converged in 8 iterations (Assembly: 7.546 s, Solve: 93.74 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=175.53 mbar: r=[31.86,56.96] umax=7.539
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 4.519e-06 | 7.258e-02 |
+| 2 | 7.316e-12 | 8.479e-07 |
+
+Converged in 2 iterations (Assembly: 2.004 s, Solve: 23.13 s).
+
+Substep 1/2 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+| 1 | 2.515e+01 | 2.861e+01 |
+| 2 | 1.717e-01 | 4.411e+00 |
+| 3 | 1.954e-01 | 2.373e+00 |
+| 4 | 3.136e-04 | 8.473e-02 |
+| 5 | 1.438e-07 | 2.026e-03 |
+| 6 | 9.532e-10 | 1.124e-03 |
+
+Converged in 6 iterations (Assembly: 6.135 s, Solve: 76.75 s).
+
+Substep 2/2 of Step 1/1 successful.
+p=200.00 mbar: r=[31.01,56.78] umax=8.216
+
+fertig. umax: 8.216286726947924
+max. von-Mises: 1.0376324324006927 MPa
+gespeichert.
