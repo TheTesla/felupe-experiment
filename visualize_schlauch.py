@@ -17,9 +17,9 @@ g.point_data["von_mises"] = vm
 print("grid:", g)
 
 txt = (f"Luftschlauch: 2 Folien verklebt an den Langkanten, {L:.0f} mm lang, Umfang {W:.0f} mm "
-       f"(R={R:.1f} mm), t={t} mm\nSchweisspunkte r={r:.0f} mm im Dreiecksverband "
-       f"s={s:.1f} mm ({N_rows:.0f} Reihen) | p={p_max*1000:.3f} mPa "
-       f"({p_max*1000:.2f} mbar) | umax={np.abs(u).max():.2f} mm | vm={vm.max():.3f} MPa\n"
+       f"(R={R:.1f} mm), t={float(data['t']):.1f} mm\nSchweisspunkte r={r:.0f} mm im Dreiecksverband "
+       f"s={s:.1f} mm ({N_rows:.0f} Reihen) | p={p_max*1e6:.0f} Pa = {p_max*1e5:.3f} bar | "
+       f"umax={np.abs(u).max():.2f} mm | vm={vm.max():.3f} MPa\n"
        f"Verformung x{scale:.0f} ueberhoeht")
 
 sargs = dict(title="von-Mises [MPa]", vertical=True, title_font_size=12, label_font_size=10)
