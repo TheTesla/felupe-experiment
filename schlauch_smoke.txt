@@ -1,0 +1,110 @@
+C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\constitution\hyperelasticity\_neo_hooke_nearly_incompressible.py:257: RuntimeWarning: invalid value encountered in power
+  Jm23 = np.power(J, -2 / 3, out=trC)
+C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\constitution\hyperelasticity\_neo_hooke_nearly_incompressible.py:317: RuntimeWarning: invalid value encountered in power
+  Jm23 = np.power(J, -2 / 3, out=trC)
+C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\solve\_solve.py:167: MatrixRankWarning: Matrix is exactly singular
+  du1 = solver(K11, -r1 - dr0.reshape(*r1.shape))
+Schlauch: R=15.28 mm | Umfang=96 | 12 theta-Zellen, 8 x-Zellen
+Muster: 4 Reihen um den Umfang -> s: 30.0 -> 27.71 mm (Reihenabstand 24.0 mm auf dem Umfang)
+Schweisspunkte im Halbmodell: 8  (Vollschlauch ~ 14)
+Schweisszellen (pixelierte Dots): 26 | zusammenzufuehrende Knoten: 58
+Zellen: 192 | Knoten: 374
+Kavitaets-Grenzflaechen: 162
+BC: ux=0 auf x=0 (43 Knoten) | uy=uz=0 an 1 Nahtknoten
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=0.000e+00 | umax=0.000 mm
+| 1 | 0.000e+00 | 0.000e+00 |
+
+Converged in 1 iterations (Assembly: 0.03098 s, Solve: 0.0212 s).
+
+Substep 1/4 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=5.093e+00 | umax=0.645 mm
+| 1 | 5.093e+00 | 8.499e+00 |
+  iter  1: |r|=9.939e-02 | umax=0.598 mm
+| 2 | 9.939e-02 | 9.341e-01 |
+  iter  2: |r|=1.522e-03 | umax=0.595 mm
+| 3 | 1.522e-03 | 1.113e-01 |
+  iter  3: |r|=3.644e-08 | umax=0.595 mm
+| 4 | 3.644e-08 | 6.442e-04 |
+  iter  4: |r|=2.595e-11 | umax=0.595 mm
+| 5 | 2.595e-11 | 2.896e-05 |
+
+Converged in 5 iterations (Assembly: 0.1052 s, Solve: 0.08406 s).
+
+Substep 2/4 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=1.011e+01 | umax=2.429 mm
+| 1 | 1.011e+01 | 1.678e+01 |
+  iter  1: |r|=1.131e+00 | umax=2.816 mm
+| 2 | 1.131e+00 | 3.696e+00 |
+  iter  2: |r|=6.794e+00 | umax=3.866 mm
+| 3 | 6.794e+00 | 1.410e+01 |
+  iter  3: |r|=1.383e-01 | umax=3.848 mm
+| 4 | 1.383e-01 | 1.792e+00 |
+  iter  4: |r|=1.353e-01 | umax=3.931 mm
+| 5 | 1.353e-01 | 1.548e+00 |
+  iter  5: |r|=4.974e-05 | umax=3.929 mm
+| 6 | 4.974e-05 | 3.386e-02 |
+  iter  6: |r|=8.419e-09 | umax=3.929 mm
+| 7 | 8.419e-09 | 4.373e-04 |
+
+Converged in 7 iterations (Assembly: 0.1424 s, Solve: 0.1174 s).
+
+Substep 3/4 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=1.289e+01 | umax=12.783 mm
+| 1 | 1.289e+01 | 8.348e+01 |
+  iter  1: |r|=nan | umax=23.236 mm
+| 2 | nan | 2.035e+02 |
+Traceback (most recent call last):
+  File "C:\Users\efame275\femair\luftmatratze_schlauch.py", line 170, in <module>
+    job.evaluate(callback=cb)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\mechanics\_job.py", line 240, in evaluate
+    for i, substep in enumerate(substeps):
+                      ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\mechanics\_step.py", line 106, in generate
+    res = newtonraphson(
+        items=self.items,
+    ...<3 lines>...
+        **kwargs,
+    )
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\tools\_newton.py", line 504, in newtonraphson
+    raise ValueError(
+        "Solution contains NaN values. Newton-Raphson method failed."
+    )
+ValueError: Solution contains NaN values. Newton-Raphson method failed.

@@ -1,0 +1,204 @@
+Schlauch: R=47.75 mm | Umfang=300 | 50 theta-Zellen, 50 x-Zellen
+Muster: 6 Reihen um den Umfang -> s: 60.0 -> 57.74 mm (Reihenabstand 50.0 mm auf dem Umfang)
+Schweisspunkte im Halbmodell: 28  (Vollschlauch ~ 53)
+Schweisszellen (pixelierte Dots): 514 | zusammenzufuehrende Knoten: 736
+Zellen: 5000 | Knoten: 9464
+Kavitaets-Grenzflaechen: 4224
+BC: ux=0 auf x=0 (185 Knoten) | uy=uz=0 an 1 Nahtknoten
+ _______  _______  ___      __   __  _______  _______
+|       ||       ||   |    |  | |  ||       ||       |
+|    ___||    ___||   |    |  | |  ||    _  ||    ___|
+|   |___ |   |___ |   |    |  |_|  ||   |_| ||   |___
+|    ___||    ___||   |___ |       ||    ___||    ___|
+|   |    |   |___ |       ||       ||   |    |   |___
+|___|    |_______||_______||_______||___|    |_______|
+FElupe Version 11.1.3
+Windows-11 AMD64 64bit
+
+Run Job
+=======
+Begin Evaluation of Step 1.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=0.000e+00 | umax=0.000 mm
+| 1 | 0.000e+00 | 0.000e+00 |
+
+Converged in 1 iterations (Assembly: 0.6214 s, Solve: 6.328 s).
+
+Substep 1/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=7.561e+00 | umax=0.183 mm
+| 1 | 7.561e+00 | 1.235e+01 |
+  iter  1: |r|=1.227e-03 | umax=0.183 mm
+| 2 | 1.227e-03 | 7.494e-02 |
+  iter  2: |r|=1.430e-07 | umax=0.183 mm
+| 3 | 1.430e-07 | 1.472e-03 |
+  iter  3: |r|=6.339e-09 | umax=0.183 mm
+| 4 | 6.339e-09 | 4.678e-04 |
+
+Converged in 4 iterations (Assembly: 2.113 s, Solve: 24.41 s).
+
+Substep 2/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=5.059e+00 | umax=0.259 mm
+| 1 | 5.059e+00 | 5.652e+00 |
+  iter  1: |r|=2.670e-02 | umax=0.262 mm
+| 2 | 2.670e-02 | 6.370e-01 |
+  iter  2: |r|=2.814e-05 | umax=0.261 mm
+| 3 | 2.814e-05 | 3.865e-02 |
+  iter  3: |r|=2.144e-11 | umax=0.261 mm
+| 4 | 2.144e-11 | 1.245e-05 |
+
+Converged in 4 iterations (Assembly: 2.096 s, Solve: 24.45 s).
+
+Substep 3/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=3.396e-07 | umax=0.262 mm
+| 1 | 3.396e-07 | 6.652e-03 |
+  iter  1: |r|=2.750e-11 | umax=0.262 mm
+| 2 | 2.750e-11 | 4.821e-05 |
+
+Converged in 2 iterations (Assembly: 1.09 s, Solve: 12.8 s).
+
+Substep 4/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=4.628e+00 | umax=0.391 mm
+| 1 | 4.628e+00 | 7.395e+00 |
+  iter  1: |r|=4.199e-02 | umax=0.402 mm
+| 2 | 4.199e-02 | 1.113e+00 |
+  iter  2: |r|=1.806e-04 | umax=0.403 mm
+| 3 | 1.806e-04 | 1.341e-01 |
+  iter  3: |r|=1.605e-10 | umax=0.403 mm
+| 4 | 1.605e-10 | 1.367e-04 |
+
+Converged in 4 iterations (Assembly: 2.187 s, Solve: 28.89 s).
+
+Substep 5/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=6.109e-01 | umax=0.456 mm
+| 1 | 6.109e-01 | 3.198e+00 |
+  iter  1: |r|=8.083e-04 | umax=0.458 mm
+| 2 | 8.083e-04 | 1.785e-01 |
+  iter  2: |r|=1.084e-07 | umax=0.458 mm
+| 3 | 1.084e-07 | 3.501e-03 |
+  iter  3: |r|=9.589e-10 | umax=0.458 mm
+| 4 | 9.589e-10 | 5.255e-04 |
+
+Converged in 4 iterations (Assembly: 2.003 s, Solve: 23.17 s).
+
+Substep 6/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=8.982e+00 | umax=0.731 mm
+| 1 | 8.982e+00 | 1.636e+01 |
+  iter  1: |r|=2.571e-01 | umax=0.775 mm
+| 2 | 2.571e-01 | 3.510e+00 |
+  iter  2: |r|=2.720e-02 | umax=0.799 mm
+| 3 | 2.720e-02 | 2.060e+00 |
+  iter  3: |r|=4.814e-06 | umax=0.799 mm
+| 4 | 4.814e-06 | 2.844e-02 |
+  iter  4: |r|=1.846e-11 | umax=0.799 mm
+| 5 | 1.846e-11 | 5.540e-05 |
+
+Converged in 5 iterations (Assembly: 2.473 s, Solve: 28.64 s).
+
+Substep 7/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=5.856e-01 | umax=0.891 mm
+| 1 | 5.856e-01 | 5.202e+00 |
+  iter  1: |r|=1.561e-03 | umax=0.896 mm
+| 2 | 1.561e-03 | 3.392e-01 |
+  iter  2: |r|=1.222e-06 | umax=0.896 mm
+| 3 | 1.222e-06 | 1.324e-02 |
+  iter  3: |r|=9.321e-12 | umax=0.896 mm
+| 4 | 9.321e-12 | 5.251e-05 |
+
+Converged in 4 iterations (Assembly: 2.427 s, Solve: 33.83 s).
+
+Substep 8/28 of Step 1/1 successful.
+
+Newton-Raphson solver
+=====================
+
+| # | norm(fun) |  norm(dx) |
+|---|-----------|-----------|
+  iter  0: |r|=3.220e+01 | umax=1.853 mm
+| 1 | 3.220e+01 | 5.025e+01 |
+  iter  1: |r|=1.446e+00 | umax=1.937 mm
+| 2 | 1.446e+00 | 5.729e+00 |
+  iter  2: |r|=4.947e+01 | umax=3.157 mm
+| 3 | 4.947e+01 | 1.135e+02 |
+  iter  3: |r|=5.077e-01 | umax=3.123 mm
+| 4 | 5.077e-01 | 3.920e+00 |
+  iter  4: |r|=1.914e+03 | umax=20.606 mm
+| 5 | 1.914e+03 | 4.645e+02 |
+C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\constitution\hyperelasticity\_neo_hooke_nearly_incompressible.py:257: RuntimeWarning: invalid value encountered in power
+  Jm23 = np.power(J, -2 / 3, out=trC)
+  iter  5: |r|=nan | umax=72.887 mm
+| 6 | nan | 7.817e+02 |
+C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\constitution\hyperelasticity\_neo_hooke_nearly_incompressible.py:317: RuntimeWarning: invalid value encountered in power
+  Jm23 = np.power(J, -2 / 3, out=trC)
+Traceback (most recent call last):
+  File "C:\Users\efame275\femair\luftmatratze_schlauch.py", line 175, in <module>
+    job.evaluate(callback=cb)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\mechanics\_job.py", line 240, in evaluate
+    for i, substep in enumerate(substeps):
+                      ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\mechanics\_step.py", line 106, in generate
+    res = newtonraphson(
+        items=self.items,
+    ...<3 lines>...
+        **kwargs,
+    )
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\tools\_newton.py", line 499, in newtonraphson
+    dx = solve(K, -f, **kwargs_solve)
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\tools\_newton.py", line 222, in solve
+    dx = fesolve.solve(*system, ext0, solver=solver)
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\felupe\solve\_solve.py", line 167, in solve
+    du1 = solver(K11, -r1 - dr0.reshape(*r1.shape))
+  File "C:\Users\efame275\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\sparse\linalg\_dsolve\linsolve.py", line 286, in spsolve
+    x, info = _superlu.gssv(N, A.nnz, A.data, indices, indptr,
+              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            b, flag, options=options)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: failed to factorize matrix at line 406 in file ../scipy/sparse/linalg/_dsolve/SuperLU/SRC/dpanel_bmod.c
+

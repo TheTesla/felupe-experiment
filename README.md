@@ -3,7 +3,39 @@
 FEM-Simulation aufblasbarer Luftmatratzen mit [FElupe](https://github.com/adtzlr/felupe)
 und 3D-Ergebnisvisualisierung mit PyVista.
 
-## v2 — Punktschweiß-Kissen (aktuell, `luftmatratze_punktschweiss.py`)
+## v3 — Verklebter Luftschlauch (`luftmatratze_schlauch.py`, `schlauch_run.py`)
+
+Die **beiden langen Kanten der Matte werden verklebt** → aus der Matte wird ein
+geschlossener **Luftschlauch** (wie ein Luftboom): Umfang = `W`, Mittellinien-Radius
+`R = W/2π`, die beiden Folien bilden die Schlauchwand. Die Startgeometrie ist direkt
+rund (flach→rund übersprungen — Membranspannung ist pfadunabhängig).
+
+Besonderheiten:
+- **Musterschluss:** `s` wird automatisch minimal angepasst (60 → 57,74 mm), damit
+  die 6 Punktreihen exakt zum Umfang schließen (6 × 60°); eine Reihe liegt auf der
+  Klebnaht (Meridian θ=0), Dots bei x = m·s bzw. versetzt m·s + s/2
+- **Naht** = alle Knoten des Meridians θ=0 zusammengeführt; **Enden** geschlossen
+- **Kavität** = Ringkanal zwischen den Folien (r = R), Innendruck wirkt auf die Wand
+
+### Ergebnisse (Schnappgrenze!)
+
+| Größe | Wert |
+|---|---|
+| stabiler Druckbereich | **bis ≈ 0,115 mbar (0,000115 MPa)** |
+| ab ≈ 0,12 mbar | **Schnapp-Instabilität**: Wand kippt lokal (limit point, nicht konvergierbar mit Laststeuerung) |
+| bei 0,115 mbar | umax = 2,34 mm, vm = 0,024 MPa |
+| Muster | 6 Reihen à 60°, ~52 Dots im Vollschlauch |
+
+**Physikalische Einordnung:** Ein so weicher Schlauch (E ≈ 1,5 MPa, t = 0,3 mm,
+D = 95 mm) hat eine sehr niedrige Beul-Schnappgrenze unter reinem Innendruck —
+realistischen Bedingungen: dickere Folie oder Gewebeeinlage erhöht die Grenze. Das ist *kein*
+Numerik-Fehler: der Feinscan (8 → 9 → 10 … 11,5 → 12 mPa in 0,5-mPa-Schritten)
+konvergiert sauber bis 11,5 und kippt reproduzierbar bei 12.
+
+Bilder: `schlauch_iso.png` (gesamter Schlauch mit Dots), `schlauch_querschnitt.png`
+(Mantelansicht mit Pillowing-Wellen), `luftmatratze_schlauch_verformt.vtu`.
+
+## v2 — Punktschweiß-Kissen (`luftmatratze_punktschweiss.py`)
 
 Zwei dünne Folien, verbunden **nur** durch kreisförmige Schweißpunkte im
 **gleichseitigen Dreiecksverband** (jeder Punkt hat 6 äquidistante Nachbarn im
