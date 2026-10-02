@@ -1,61 +1,89 @@
 # felupe-experiment — Luftmatratzen-FEM-Simulation
 
-Einfache FEM-Simulation einer aufblasbaren Luftmatratze (Luftkissen) mit
-[FElupe](https://github.com/adtzlr/felupe) inklusive 3D-Ergebnisvisualisierung mit PyVista.
+FEM-Simulation aufblasbarer Luftmatratzen mit [FElupe](https://github.com/adtzlr/felupe)
+und 3D-Ergebnisvisualisierung mit PyVista.
 
-## Modell
+## v2 — Punktschweiß-Kissen (aktuell, `luftmatratze_punktschweiss.py`)
 
-- Hohler Gummikasten 200 × 100 × 40 mm, Wandstärke 5 mm (Volumenschale aus Hexaeder-Elementen)
-- Material: Neo-Hooke (`mu = 0.17 MPa`, `bulk = 1.7 MPa`, E ≈ 0,5 MPa — gummielastisch/PVC-ähnlich)
-- Belastung: Innendruck 0,08 bar (0,008 MPa), auf die Innenseite der Wandschale (`SolidBodyPressure`)
-- Randbedingungen: drei Symmetrie-Ebenen in der Modellmitte (x=0, y=0, z=0, je eine Komponente fixiert)
-- Laststeuerung: quadratische Lastschrittfolge (fein am Anfang — die flache Membran ist lastempfindlich)
+Zwei dünne Folien, verbunden **nur** durch kreisförmige Schweißpunkte im
+**gleichseitigen Dreiecksverband** (jeder Punkt hat 6 äquidistante Nachbarn im
+Abstand `s`). Ein Perimeter-Schweißband schließt das Kissen luftdicht.
+Der Innendruck wölbt die Folien zwischen den Punkten auf (**Pillowing**).
 
-## Ergebnisse (p = 0,08 bar)
+### Parameter (Skriptkopf)
+
+| Parameter | Bedeutung | Beispielwert |
+|---|---|---|
+| `L` | Länge (x) [mm] | 600 |
+| `W` | Breite (y) [mm] | 300 |
+| `t` | Folienstärke [mm] | 0,3 |
+| `s` | Schweißpunkt-Abstand = Dreiecksseite [mm] | 60 |
+| `r` | Schweißpunkt-Radius [mm] | 15 |
+| `cell` | Elementkante in der Ebene [mm] | 5 |
+| `p_max` | Innendruck [MPa] | 0,008 (= 0,08 bar) |
+
+### Modellierung
+
+- Viertelmodell (Symmetrie x=0, y=0), zwei Hexaeder-Lagen (jeweils 1 Element dick)
+- Schweißpunkte: Knoten der Folien-Innenflächen werden an den Punktabdrücken
+  **zusammengeführt** (echte Punktverbindung, keine Kontakt-Formulierung)
+- Perimeter: alle Randknoten zusammengeführt → geschlossene Naht
+- Druck: `RegionHexahedronBoundary` auf die Kavität z=0 (die Schweißflächen sind
+  dort *interior* und fallen automatisch aus der Grenzfläche heraus)
+- Material: Neo-Hooke, `mu = 0.5 MPa` (E ≈ 1,5 MPa, weiches PVC)
+- BC-ACHTUNG: FElupe `skip=True` = Komponente wird **nicht** vorgeschrieben
+
+### Ergebnisse (Beispielwerte)
 
 | Größe | Wert |
 |---|---|
-| max. Verschiebung (Kissenaufblähung) | ≈ 31,1 mm |
-| max. von-Mises-Spannung | ≈ 0,170 MPa |
-| konvergierte Lastschritte | 61/61 |
+| max. Verschiebung (Pillowing) | ≈ 20,1 mm (Feldmitte; Deck nach oben, Boden nach unten) |
+| max. von-Mises | ≈ 1,28 MPa — **Spannungsring am Rand jedes Schweißpunkts** |
+| Schweißpunkte (Vollmodell) | ~52 im Dreiecksverband |
+| konvergierte Lastschritte | 31/31 |
 
-Die Deck-/Bodenmembran beult dabei freies auf (Maximum exakt in der Modellmitte,
-glatter symmetrischer Bogen — verifiziert per Schnittkurven), die schmalen
-Seitenwände bleiben nahezu formstabil.
+Plausibilitätscheck: Membranspannung σ ≈ p·R/(2t) mit Feldkrümmungsradius R ≈ 30 mm
+ergibt ~0,4 MPa Feldspannung; Faktor 2–3 Spannungskonzentration am Punktrand →
+Spitzenwert ~1,3 MPa ✓.
 
-## Dateien
+### Bilder (v2)
 
 | Datei | Inhalt |
 |---|---|
-| `luftmatratze_sim.py` | FEM-Simulation (FElupe), schreibt `luftmatratze_result.npz` |
-| `visualize_luftmatratze.py` | 3D-Renderings + VTU-Export (PyVista) |
-| `luftmatratze_vonmises.png` | verformte Matratze, von-Mises-Spannung (Verformung ×3) |
-| `luftmatratze_draufsicht.png` | Draufsicht |
-| `luftmatratze_schnitt.png` | Längs-/Querschnitt in echtem Maßstab (matplotlib) |
-| `luftmatratze_seitenansicht.png` | Seitenansicht in echtem Maßstab |
-| `luftmatratze_interaktiv.html` | drehbare 3D-Ansicht (vtk.js) — einfach im Browser öffnen |
-| `luftmatratze_verformt.vtu` | ParaVieW/PyVista-Datensatz (von_mises, disp_mag) |
-| `luftmatratze_result.npz` | Rohdaten (Punkte, Zellen, u, Spannungen) |
+| `punkt_draufsicht.png` | Kissen von oben: Dot-Muster mit Spannungsringen |
+| `punkt_iso.png` | Isometrie: Pillowing-Wülste, versetzte Punktreihen |
+| `punkt_schnitt.png` | Schnitt y=0: Deck wölbt nach oben, Boden nach unten |
+| `luftmatratze_punkt_verformt.vtu` | ParaVieW-Datensatz (von_mises, disp) |
+| `luftmatratze_punkt_result.npz` | Rohdaten (inkl. L, W, t, s, r) |
+
+## v1 — Geschlossenes Luftkissen (`luftmatratze_sim.py`)
+
+Hohler Gummikasten (200 × 100 × 40 mm, Wand 5 mm) als Referenzmodell mit
+durchgehender Kavität. Ergebnisse: 31 mm Aufblähung, 0,17 MPa bei 0,08 bar;
+Schnitte in `luftmatratze_schnitt.png`, drehbare Ansicht in
+`luftmatratze_interaktiv.html`.
 
 ## Ausführen
 
 ```bash
-pip install felupe pyvista
-python luftmatratze_sim.py        # ca. 3–5 min
-python visualize_luftmatratze.py
+pip install felupe pyvista matplotlib
+python luftmatratze_punktschweiss.py   # ca. 5–8 min (Viertelmodell, 3600 Zellen)
+python visualize_punktschweiss.py
 ```
 
-## Anmerkungen / Fallstricke
+## Fallstricke (experimentell verifiziert)
 
-- **FElupe `Boundary(skip=...)` ist invers** zu intuitiver Erwartung:
-  `skip=True` heißt — diese Komponente wird *nicht* vorgeschrieben
-  (Quelle `felupe/dof/_boundary.py`, `apply_mask`).
-- Innendruck auf eine Kavität: `RegionHexahedronBoundary(mesh, mask=...)`
-  mit Maske „Knoten strikt innerhalb der Außenmaße"; die Maske muss Knoten
-  von Elementen *auf* der Fläche wählen — Feinheit: nur so landet die
-  Kavitätsoberfläche in der Grenzregion.
-- Knoten ohne Elemente (Hohlraum eines Schalenmodells) fixiert FElupe
-  automatisch (`mesh.points_without_cells` → `dof0`); wir entfernen sie
-  trotzdem explizit, damit Ergebnisfelder keine Nullwert-Inseln haben.
-- flache Membran + Enddruck: feine (quadratische) Lastschritte am Anfang nötig,
-  sonst divergiert der Newton-Solver im ersten Aufblähübergang.
+1. **FElupe `Boundary(skip=...)` ist invers**: `skip=True` heißt — Komponente
+   wird *nicht* vorgeschrieben (`felupe/dof/_boundary.py`, `apply_mask`).
+2. **Knoten-Merging für Schweißpunkte**: Die Remap-Tabelle muss die *nicht*
+   verschweißten Knoten auf sich selbst abbilden — sonst verschmelzen alle
+   Folienknoten (Kavität leer → Druckfläche 0 → u ≡ 0; der Solver "konvergiert"
+   dann mit der Nulllösung).
+3. **Kavität mit `RegionHexahedronBoundary(mask=...)`**: Die Maske wählt Knoten;
+   nur Facetten, die ausschließlich aus maskierten Knoten bestehen, werden
+   Grenzflächen. Verbundene Stellen (Schweißpunkte) fallen automatisch weg.
+4. **Flache Membranen**: quadratische Lastschrittfolge `p·linspace²` verwenden —
+   äquidistante Schritte divergieren im ersten Aufblähübergang.
+5. **Knoten ohne Elemente** fixiert FElupe zwar automatisch
+   (`points_without_cells` → `dof0`), aber Ergebnisfelder enthalten dann
+   Nullwert-Inseln → im Mesh direkt entfernen.
